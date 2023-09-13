@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vt2vi53Converter", "vt2vi53Converter\vt2vi53Converter.csproj", "{981B66CD-5C1C-4C45-BBBC-DDF49B6F1EBE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{981B66CD-5C1C-4C45-BBBC-DDF49B6F1EBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{981B66CD-5C1C-4C45-BBBC-DDF49B6F1EBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{981B66CD-5C1C-4C45-BBBC-DDF49B6F1EBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{981B66CD-5C1C-4C45-BBBC-DDF49B6F1EBE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6E09E1BF-BDEA-4AA5-B4C3-F7894F925C7B}
+	EndGlobalSection
+EndGlobal
