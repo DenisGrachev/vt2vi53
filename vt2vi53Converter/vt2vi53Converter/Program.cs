@@ -262,11 +262,11 @@ namespace vt2vi53Converter
                             samples.Add((byte)(realDelta / 256));
                             //Console.WriteLine(deltaInt);
                         }
-                        //иначе тупо 0
+                        //иначе тупо ffff
                         else
                         {
-                            samples.Add(0);
-                            samples.Add(0);
+                            samples.Add(255);
+                            samples.Add(255);
                         }
 
                         sampleCount++;

@@ -353,8 +353,5 @@ MigrationBackup/
 .vscode/
 _sjasmplus/
 
-#exclude sjasmplus exe
-sjasmplus.exe
-
-#exclude bat files
-compile.bat
+#exclude all exe
+*.exe
