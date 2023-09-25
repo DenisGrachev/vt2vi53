@@ -86,6 +86,7 @@ speedTick:  db 1
 ;16 bytes header
 vktInit:  
     push hl           
+    call vktStop
     ld de,16 : add hl,de : ex hl,de;skip header
     pop bc    
 
@@ -279,19 +280,13 @@ CH=#36
 4:
     ld a,(notesBuffer+N*NB_SIZE+8) : or a : jp z,2f
     xor a : ld (notesBuffer+N*NB_SIZE+8),a
-    ld a,CH : out (08),a;enable chan
 ;==============================================
-
 2:
     pop hl;восстанавливаем частоту
     add hl,bc;докидываем смещение из инструмента
     ;пишем в порт
     ld a,l : OUT  (PORT),a
     ld a,h : OUT  (PORT),a
-    ;ld  a,(hl)
-    ;OUT  (PORT),a
-    ;inc l : ld A,(hl)
-    ;OUT  (PORT),a
 1:
 N=N+1
 PORT=PORT-1   
@@ -444,8 +439,6 @@ disableTimer:
     ld hl,(chBuffer) : ld (hl),0;disable ch
     jp nextNote       ;перейти к следующей ноте
 enableTimer:
-    ld  A,(currentCh)        ;включить канал
-    OUT  (08),a       ;
     ld hl,(chBuffer) : ld (hl),1;enable ch
     ld hl,(currentTick)
     ;и сразу поиграть следующую ноту
